@@ -1,4 +1,6 @@
 const http = require('http');
+// import des chemins
+require('dotenv').config({path: '.env'})
 // import de l'application
 const app = require('./app');
 
