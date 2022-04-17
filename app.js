@@ -3,9 +3,6 @@ const express = require('express');
 // Création de l'application express
 const app = express();
 
-// Donner accès au corps de la requête
-app.use(express.json());
-
 // Autorisation cors
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
