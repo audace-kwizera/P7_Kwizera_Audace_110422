@@ -21,5 +21,6 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
+
 // Exportatin de l'application express
 module.exports = app;
