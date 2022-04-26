@@ -1,4 +1,4 @@
-// Login
+// Connexion
 module.exports = function ({ app, dbConn }) {
   app.post("/login", (req, res) => {
     const { email, password } = req.body;
@@ -8,11 +8,11 @@ module.exports = function ({ app, dbConn }) {
         if (response && response.length !== 0) {
           res.status(200).jsonp({ ...response[0] });
         } else {
-          res.status(200).jsonp({ message: "Your username or password is not correct" });
+          res.status(200).jsonp({ message: "Oups votre pseudo ou mot de passe est incorrect" });
         }
       });
     } else {
-      res.status(200).jsonp({ message: "Your username or password is not correct" });
+      res.status(200).jsonp({ message: "Oups votre pseudo ou mot de passe est incorrect" });
     }
   });
 };
